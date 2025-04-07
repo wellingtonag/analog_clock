@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  background: #868686;
+  font-family: 'Quicksand', sans-serif;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+  margin: 40px 0 0;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(20deg);
+  perspective: 1000px;
+}
+
+.clock {
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.1), 0 15px 30px rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  position: relative;
+  transform: rotate(-90deg);
+}
+
+.time {
+  color: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  transform: rotate(90deg);
+  font-size: 16px;
+}
+
+.time-12 {
+  top: 50%;
+  right: 0;
+  margin-top: -10px;
+}
+
+.time-3 {
+  bottom: 0;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.time-6 {
+  top: 49%;
+  left: 0;
+  margin-top: -8px;
+  margin-left: 4px;
+}
+
+.time-9 {
+  top: 0;
+  left: 50%;
+  margin-left: -4px;
+}
+
+.line {
+  position: absolute;
+  transform-origin: 0% 50%;
+  top: 50%;
+  left: 50%;
+}
+
+#seconds {
+  width: 100px;
+  height: 2px;
+  background: red;
+  border-radius: 0 6px 6px 0;
+  transform: rotate(180deg);
+  transition: transform 0.1s linear;
+}
+
+#minutes {
+  width: 90px;
+  height: 4px;
+  background: #a8a8a8;
+  border-radius: 0 6px 6px 0;
+  transform: rotate(270deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+#hours {
+  width: 60px;
+  height: 6px;
+  background: #585858;
+  border-radius: 0 6px 6px 0;
+  transform: rotate(0deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.mid {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle at 30% 30%, #ecc560, #6d5b1c);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: inset -1px -1px 3px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(117, 102, 15, 0.411);
+}
+
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.767);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+}
+
+.dot-1  { transform: rotate(30deg) translate(115px) rotate(-30deg); }
+.dot-2  { transform: rotate(60deg) translate(114px) rotate(-60deg); }
+.dot-4  { transform: rotate(121.5deg) translate(116px) rotate(-120deg); }
+.dot-5  { transform: rotate(151deg) translate(118.5px) rotate(-150deg); }
+.dot-7  { transform: rotate(210.5deg) translate(123px) rotate(-210deg); }
+.dot-8  { transform: rotate(240deg) translate(121.5px) rotate(-240deg); }
+.dot-10 { transform: rotate(299deg) translate(118.5px) rotate(-300deg); }
+.dot-11 { transform: rotate(329deg) translate(116px) rotate(-330deg); }
